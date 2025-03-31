@@ -3,9 +3,9 @@ package com.rfdev.desafio_itau.domain.transacao;
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 
-import com.rfdev.desafio_itau.exceptions.CampoObrigatorioException;
-import com.rfdev.desafio_itau.exceptions.DataHoraInvalidaException;
-import com.rfdev.desafio_itau.exceptions.ValorInvalidoException;
+import com.rfdev.desafio_itau.domain.exceptions.CampoObrigatorioException;
+import com.rfdev.desafio_itau.domain.exceptions.DataHoraInvalidaException;
+import com.rfdev.desafio_itau.domain.exceptions.ValorInvalidoException;
 
 public class Transacao {
   private BigDecimal valor;

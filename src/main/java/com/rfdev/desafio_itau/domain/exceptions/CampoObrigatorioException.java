@@ -1,4 +1,4 @@
-package com.rfdev.desafio_itau.exceptions;
+package com.rfdev.desafio_itau.domain.exceptions;
 
 public class CampoObrigatorioException extends RuntimeException {
 

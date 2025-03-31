@@ -9,9 +9,9 @@ import java.time.OffsetDateTime;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import com.rfdev.desafio_itau.exceptions.CampoObrigatorioException;
-import com.rfdev.desafio_itau.exceptions.DataHoraInvalidaException;
-import com.rfdev.desafio_itau.exceptions.ValorInvalidoException;
+import com.rfdev.desafio_itau.domain.exceptions.CampoObrigatorioException;
+import com.rfdev.desafio_itau.domain.exceptions.DataHoraInvalidaException;
+import com.rfdev.desafio_itau.domain.exceptions.ValorInvalidoException;
 
 public class TransacaoTest {
 
