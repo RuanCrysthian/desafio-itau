@@ -2,6 +2,9 @@ package com.rfdev.desafio_itau.application.usecase.estatisticas;
 
 import com.rfdev.desafio_itau.domain.transacao.Transacao;
 import com.rfdev.desafio_itau.domain.transacao.TransacaoRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -9,10 +12,13 @@ import java.time.OffsetDateTime;
 import java.util.DoubleSummaryStatistics;
 import java.util.List;
 
+@Service
 public class EstatisticaTransacoesUseCase {
 
   private static final int SEGUNDOS_PARA_FILTRAR = 60;
   private static final int CASAS_DECIMAIS = 2;
+
+  private final Logger logger = LoggerFactory.getLogger(EstatisticaTransacoesUseCase.class);
 
   private final TransacaoRepository transacaoRepository;
 
@@ -25,7 +31,7 @@ public class EstatisticaTransacoesUseCase {
     List<Transacao> transacoes = transacaoRepository.getTransacoes();
 
     DoubleSummaryStatistics estatisticas = calcularEstatisticas(transacoes, limite);
-
+    logger.info("estatisticas consultadas em {}", OffsetDateTime.now());
     return construirDto(estatisticas);
   }
 
