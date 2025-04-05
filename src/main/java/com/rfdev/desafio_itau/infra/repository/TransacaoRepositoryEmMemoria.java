@@ -1,11 +1,13 @@
 package com.rfdev.desafio_itau.infra.repository;
 
+import com.rfdev.desafio_itau.domain.transacao.Transacao;
+import com.rfdev.desafio_itau.domain.transacao.TransacaoRepository;
+import org.springframework.stereotype.Repository;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import com.rfdev.desafio_itau.domain.transacao.Transacao;
-import com.rfdev.desafio_itau.domain.transacao.TransacaoRepository;
-
+@Repository
 public class TransacaoRepositoryEmMemoria implements TransacaoRepository {
 
   private final List<Transacao> transacoes = new ArrayList<>();
